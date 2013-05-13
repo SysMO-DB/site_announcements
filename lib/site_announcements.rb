@@ -1,4 +1,7 @@
 module SiteAnnouncements
+
+  require 'site_announcements/engine' if defined?(Rails)
+
   module Acts
     def self.included(mod)
       mod.extend(ClassMethods)
