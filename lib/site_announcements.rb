@@ -40,3 +40,5 @@ module SiteAnnouncements
     
   end
 end
+
+ActiveRecord::Base.send(:include,SiteAnnouncements::Acts)
