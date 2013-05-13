@@ -1,5 +1,11 @@
-ActionController::Routing::Routes.draw do |map|
+Rails.application.routes.draw do
 
-  map.resources :site_announcements,:collection=>{:feed=>:get,:notification_settings=>:get,:update_notification_settings=>:post}
+  resources :site_announcements do
+    collection do
+      get :feed
+      get :notification_settings
+      post :update_notification_settings
+    end
+  end
   
 end
