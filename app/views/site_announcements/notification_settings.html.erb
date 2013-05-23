@@ -6,7 +6,7 @@
     <p>
         Please change the setting below to your preferred setting:
     </p>
-    <% form_tag update_notification_settings_site_announcements_path  do -%>
+    <%= form_tag update_notification_settings_site_announcements_path  do -%>
     <%= hidden_field_tag :key, @info.unique_key -%>
     <p>
         Receive site annoucement emails: <%= check_box_tag(:receive_notifications, value="true", checked=@info.receive_notifications?, options = {}) -%>
