@@ -23,7 +23,7 @@ class SiteAnnouncement < ActiveRecord::Base
   end
 
   def body_html
-    helper.auto_link(simple_format(h(body)))
+    helper.simple_format(auto_link(body,:sanitize=>true),{},:sanitize=>true)
   end
 
   private
