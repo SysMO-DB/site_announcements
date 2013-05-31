@@ -19,11 +19,11 @@ class SiteAnnouncement < ActiveRecord::Base
 
   def self.feed_announcements options={}
     options[:limit] ||= 5
-    self.find(:all,:conditions=>(["show_in_feed = ?",true]),:order=>"created_at DESC",:limit=>options[:limit])
+    self.where(["show_in_feed = ?",true]).order("created_at DESC").limit(options[:limit])
   end
 
   def body_html
-    helper.simple_format(auto_link(body,:sanitize=>true),{},:sanitize=>true)
+    helper.simple_format(helper.auto_link(body,:sanitize=>true),{},:sanitize=>true).html_safe
   end
 
   private
