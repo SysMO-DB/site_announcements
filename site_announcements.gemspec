@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'site_announcements'
-  s.version     = '1.0.1'
+  s.version     = '1.1'
   s.date        = '2013-10-03'
   s.summary     = "Site announcements"
   s.authors     = ["Stuart Owen","Quyen Nguyen"]
