@@ -64,7 +64,7 @@ class SiteAnnouncementsController < ApplicationController
   
   def create
     @site_announcement=SiteAnnouncement.new(params[:site_announcement])
-    @site_announcement.announcer = currently_logged_in
+    @site_announcement.announcer = current_person
 
     respond_to do |format|
       if @site_announcement.save
